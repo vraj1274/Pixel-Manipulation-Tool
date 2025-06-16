@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Encryptor/Decryptor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">🔐 File Encryption & Decryption</h1>
+
+    <div class="row">
+        <!-- Encryption Form -->
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">Encrypt File</div>
+                <div class="card-body">
+                    <form action="/encrypt" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="encrypt-file" class="form-label">Choose file to encrypt:</label>
+                            <input id="encrypt-file" class="form-control" type="file" name="file" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Encrypt & Download</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decryption Form -->
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">Decrypt File</div>
+                <div class="card-body">
+                    <form action="/decrypt" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="decrypt-file" class="form-label">Upload encrypted file:</label>
+                            <input id="decrypt-file" class="form-control" type="file" name="file" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Decrypt & Download</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
